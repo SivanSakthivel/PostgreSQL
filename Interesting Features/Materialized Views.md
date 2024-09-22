@@ -27,6 +27,7 @@ WHERE
     order_date >= DATE_TRUNC('month', CURRENT_DATE) - INTERVAL '1 month'
 GROUP BY 
     category;
+```
 
 ### Step 2: Refreshing the Materialized View
 Since the underlying sales data changes frequently, you need to refresh the materialized view to ensure it reflects the latest data. This can be done manually or scheduled as a periodic job.
@@ -51,6 +52,3 @@ SELECT * FROM monthly_sales;
 Materialized views are an excellent solution for scenarios where performance is critical and data does not need to be real-time. By using them wisely, you can enhance the efficiency of your PostgreSQL applications and improve user experience.
 
 Feel free to contribute additional insights or examples to this section!
-```
-
-Let me know if you'd like to make any adjustments or if there's anything else you'd like to include!
